@@ -14,123 +14,241 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includedKeyPhrases:
   - {fileID: 11400000, guid: edccd6ff5393d324f96a252c1b0fd2db, type: 2}
+  - {fileID: 11400000, guid: 23608e6dc5f3f564888a22ec2b25f3e3, type: 2}
   customKeyPhrases:
-  - abstract
-  - as
-  - base
-  - bool
-  - break
-  - byte
-  - case
-  - catch
-  - char
-  - checked
-  - class
-  - const
-  - continue
-  - decimal
-  - default
-  - delegate
-  - do
-  - double
-  - else
-  - enum
-  - event
-  - explicit
-  - extern
-  - false
-  - finally
-  - fixed
-  - float
-  - for
-  - foreach
-  - goto
-  - if
-  - implicit
-  - in
-  - int
-  - interface
-  - internal
-  - is
-  - lock
-  - long
-  - namespace
-  - new
-  - null
-  - object
-  - operator
-  - out
-  - override
-  - params
-  - private
-  - protected
-  - public
-  - readonly
-  - ref
-  - return
-  - sbyte
-  - sealed
-  - short
-  - sizeof
-  - stackalloc
-  - static
-  - string
-  - struct
-  - switch
-  - this
-  - throw
-  - true
-  - try
-  - typeof
-  - uint
-  - ulong
-  - unchecked
-  - unsafe
-  - ushort
-  - using
-  - virtual
-  - void
-  - volatile
-  - while
-  - add
-  - and
-  - alias
-  - ascending
-  - args
-  - async
-  - await
-  - by
-  - descending
-  - dynamic
-  - equals
-  - from
-  - get
-  - global
-  - group
-  - init
-  - into
-  - join
-  - let
-  - managed
-  - nameof
-  - nint
-  - not
-  - notnull
-  - nuint
-  - on
-  - or
-  - orderby
-  - partial
-  - partial
-  - record
-  - remove
-  - select
-  - set
-  - unmanaged
-  - generic
-  - value
-  - var
-  - when
-  - where
-  - with
-  - yield
+  - key: abstract
+    value: abstract
+  - key: as
+    value: as
+  - key: base
+    value: base
+  - key: boo lee an
+    value: bool
+  - key: break
+    value: break
+  - key: byte
+    value: byte
+  - key: case
+    value: case
+  - key: catch
+    value: catch
+  - key: char
+    value: char
+  - key: checked
+    value: checked
+  - key: class
+    value: class
+  - key: constant
+    value: const
+  - key: continue
+    value: continue
+  - key: decimal
+    value: decimal
+  - key: default
+    value: default
+  - key: delegate
+    value: delegate
+  - key: do
+    value: do
+  - key: double
+    value: double
+  - key: else
+    value: else
+  - key: e num
+    value: enum
+  - key: event
+    value: event
+  - key: explicit
+    value: explicit
+  - key: external
+    value: extern
+  - key: false
+    value: false
+  - key: finally
+    value: finally
+  - key: fixed
+    value: fixed
+  - key: float
+    value: float
+  - key: for
+    value: for()
+  - key: for each
+    value: foreach()
+  - key: go to
+    value: goto
+  - key: if
+    value: if
+  - key: implicit
+    value: implicit
+  - key: in
+    value: in
+  - key: int
+    value: int
+  - key: interface
+    value: interface
+  - key: internal
+    value: internal
+  - key: is?
+    value: is
+  - key: lock
+    value: lock
+  - key: long
+    value: long
+  - key: name space
+    value: namespace
+  - key: new
+    value: new
+  - key: null
+    value: null
+  - key: object
+    value: object
+  - key: operator
+    value: operator
+  - key: out
+    value: out
+  - key: override
+    value: override
+  - key: pa rams
+    value: params
+  - key: private
+    value: private
+  - key: protected
+    value: protected
+  - key: public
+    value: public
+  - key: read only
+    value: readonly
+  - key: ref
+    value: ref
+  - key: return
+    value: return
+  - key: s byte
+    value: sbyte
+  - key: sealed
+    value: sealed
+  - key: short
+    value: short
+  - key: size of
+    value: sizeof
+  - key: stack allocation
+    value: stackalloc
+  - key: static
+    value: static
+  - key: string
+    value: string
+  - key: structure
+    value: struct
+  - key: switch
+    value: switch
+  - key: this
+    value: this
+  - key: throw
+    value: throw
+  - key: true
+    value: true
+  - key: try
+    value: try
+  - key: type of
+    value: typeof()
+  - key: u int
+    value: uint
+  - key: u long
+    value: ulong
+  - key: unchecked
+    value: unchecked
+  - key: unsafe
+    value: unsafe
+  - key: u short
+    value: ushort
+  - key: using
+    value: using
+  - key: virtual
+    value: virtual
+  - key: void
+    value: void
+  - key: volatile
+    value: volatile
+  - key: while
+    value: while()
+  - key: add
+    value: add
+  - key: and
+    value: and
+  - key: alias
+    value: alias
+  - key: ascending
+    value: ascending
+  - key: arguments
+    value: args
+  - key: a sync
+    value: async
+  - key: await
+    value: await
+  - key: by
+    value: by
+  - key: descending
+    value: descending
+  - key: dynamic
+    value: dynamic
+  - key: equals
+    value: equals
+  - key: from
+    value: from
+  - key: get
+    value: get
+  - key: global
+    value: global
+  - key: group
+    value: group
+  - key: init
+    value: init
+  - key: into
+    value: into
+  - key: join
+    value: join
+  - key: let
+    value: let
+  - key: managed
+    value: managed
+  - key: name of
+    value: nameof()
+  - key: n int
+    value: nint
+  - key: not
+    value: not
+  - key: not null
+    value: notnull
+  - key: n uint
+    value: nuint
+  - key: on
+    value: on
+  - key: or
+    value: or
+  - key: order by
+    value: orderby
+  - key: partial
+    value: partial
+  - key: record
+    value: record
+  - key: remove
+    value: remove
+  - key: required
+    value: required
+  - key: select
+    value: select
+  - key: set
+    value: set
+  - key: unmanaged
+    value: unmanaged
+  - key: value
+    value: value
+  - key: var
+    value: var
+  - key: when
+    value: when
+  - key: where
+    value: where
+  - key: with
+    value: with
+  - key: yield
+    value: yield
