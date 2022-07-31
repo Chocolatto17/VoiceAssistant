@@ -27,8 +27,19 @@ namespace Chocolatto.VoiceAssistance
 
             if (result.Phrases[0].Text.Trim().ToLower() == "open steam")
             {
-                ICommandOS commandOS = new WindowsCommand();
-                commandOS.OpenApplication(null, @"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Steam\Steam.exe");
+                new OpenApplicationCommand(null, @"C:\Program Files (x86)\Steam\Steam.exe").Execute();
+                return;
+            }
+
+            if (result.Phrases[0].Text.Trim().ToLower() == "minimize steam")
+            {
+                new MinimizeApplicationCommand("Steam").Execute();
+                return;
+            }
+
+            if (result.Phrases[0].Text.Trim().ToLower() == "close steam")
+            {
+                new CloseApplicationCommand("Steam").Execute();
                 return;
             }
 

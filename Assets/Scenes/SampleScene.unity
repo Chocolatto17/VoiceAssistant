@@ -157,6 +157,7 @@ MonoBehaviour:
   MaxAlternatives: 3
   MaxRecordLength: 5
   AutoStart: 1
+  RunInBackground: 1
   KeyPhrases: []
 --- !u!114 &131055354
 MonoBehaviour:

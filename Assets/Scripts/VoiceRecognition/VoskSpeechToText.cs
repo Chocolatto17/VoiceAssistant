@@ -32,6 +32,9 @@ namespace Chocolatto.VoiceAssistance
         [Tooltip("Should the recognizer start when the application is launched?")]
         public bool AutoStart = true;
 
+        [Tooltip("Should the recognizer run in the background?")]
+        public bool RunInBackground = false;
+
         [Tooltip("The phrases that will be detected. If left empty, all words will be detected.")]
         public List<string> KeyPhrases = new List<string>();
 
@@ -89,6 +92,8 @@ namespace Chocolatto.VoiceAssistance
         {
             if (AutoStart)
                 StartVoskStt();
+
+            Application.runInBackground = RunInBackground;
         }
 
         /// <summary>
@@ -157,25 +162,7 @@ namespace Chocolatto.VoiceAssistance
             await UniTask.WaitUntil(() => Microphone.devices.Length > 0);
         }
 
-        //Translates the KeyPhraseses into a json array and appends the `[unk]` keyword at the end to tell vosk to filter other phrases.
-        private void UpdateGrammar()
-        {
-            if (KeyPhrases.Count == 0)
-            {
-                _grammar = "";
-                return;
-            }
 
-            JSONArray keywords = new JSONArray();
-            foreach (string keyphrase in KeyPhrases)
-            {
-                keywords.Add(new JSONString(keyphrase.ToLower()));
-            }
-
-            keywords.Add(new JSONString("[unk]"));
-
-            _grammar = keywords.ToString();
-        }
 
         //Decompress the model zip file or return the location of the decompressed files.
         private async UniTask Decompress()
@@ -333,6 +320,26 @@ namespace Chocolatto.VoiceAssistance
             }
 
             voskRecognizerReadMarker.End();
+        }
+
+        //Translates the KeyPhraseses into a json array and appends the `[unk]` keyword at the end to tell vosk to filter other phrases.
+        private void UpdateGrammar()
+        {
+            if (KeyPhrases.Count == 0)
+            {
+                _grammar = "";
+                return;
+            }
+
+            JSONArray keywords = new JSONArray();
+            foreach (string keyphrase in KeyPhrases)
+            {
+                keywords.Add(new JSONString(keyphrase.ToLower()));
+            }
+
+            keywords.Add(new JSONString("[unk]"));
+
+            _grammar = keywords.ToString();
         }
 
         public void StopVoskStt()
